@@ -16,6 +16,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 }    
 );
 builder.Services.AddScoped<IAlunoService, AlunosService>();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:3000")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +38,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
+app.UseCors();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
