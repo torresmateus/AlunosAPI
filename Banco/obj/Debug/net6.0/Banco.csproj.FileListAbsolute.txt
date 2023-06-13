@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\AlunosAPI\Banco\bin\Debug\net6.0\Banco.deps.json
+C:\Users\Admin\source\repos\AlunosAPI\Banco\bin\Debug\net6.0\Banco.dll
+C:\Users\Admin\source\repos\AlunosAPI\Banco\bin\Debug\net6.0\Banco.pdb
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.AssemblyInfo.cs
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.dll
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\refint\Banco.dll
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\Banco.pdb
+C:\Users\Admin\source\repos\AlunosAPI\Banco\obj\Debug\net6.0\ref\Banco.dll

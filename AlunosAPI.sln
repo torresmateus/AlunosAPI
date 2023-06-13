@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlunosAPI", "AlunosAPI\AlunosAPI.csproj", "{CC2862D6-640D-46F2-8F04-7F121E6F8D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj", "{187A3CF1-E10F-4D74-8CD9-CD6436678414}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC2862D6-640D-46F2-8F04-7F121E6F8D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2862D6-640D-46F2-8F04-7F121E6F8D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2862D6-640D-46F2-8F04-7F121E6F8D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2862D6-640D-46F2-8F04-7F121E6F8D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187A3CF1-E10F-4D74-8CD9-CD6436678414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187A3CF1-E10F-4D74-8CD9-CD6436678414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187A3CF1-E10F-4D74-8CD9-CD6436678414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187A3CF1-E10F-4D74-8CD9-CD6436678414}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6237A39-2144-4819-AA42-1D9AC8453AD7}
+	EndGlobalSection
+EndGlobal
