@@ -11,6 +11,27 @@ function App() {
   const baseUrl="https://localhost:7060/api/alunos";
   
   const [data, setData]=useState([]);
+  
+  const [modalIncluir, setModalIncluir]=useState(false);
+
+  const[alunoSelecionado, setAlunoSelecionado]=useState({
+    id: '',
+    nome: '',
+    email: '',
+    idade: '' 
+  })
+
+  const abrirFecharModalIncluir=()=>{
+    setModalIncluir(!modalIncluir)
+  }
+
+  const handleChange = e=>{
+    const {name,value} = e.target;
+    setAlunoSelecionado({
+      ...alunoSelecionado,[name]:value
+    });
+    console.log(setAlunoSelecionado);
+  }
 
   const pedidosGet = async()=>{
     await axios.get(baseUrl)
@@ -21,17 +42,29 @@ function App() {
     })
   }
 
+  const pedidosPost = async()=>{
+    delete alunoSelecionado.id;
+    alunoSelecionado.idade = parseInt(alunoSelecionado.idade);
+      await axios.post(baseUrl, alunoSelecionado)
+      .then(response=> {
+        setData(data.concat(response.data));
+        abrirFecharModalIncluir();
+      }).catch(error=>{
+        console.log(error);
+      })
+  }
+
   useEffect(()=>{
     pedidosGet();
   })
 
   return (
-    <div className="App">
+    <div className="aluno-container">
       <br/>
       <h3>Cadastro de Alunos</h3>
       <header>
         <img src={logo}  width="150" height="100" alt ='logo' />
-        <button className="btn btn-success">Adicionar Aluno</button>
+        <button className="btn btn-success" onClick={()=> abrirFecharModalIncluir()}>Adicionar Aluno</button>
       </header>
       <table className="table table-bordered">
         <thead>
@@ -58,6 +91,28 @@ function App() {
         ))}
         </tbody>
       </table>
+      <Modal isOpen={modalIncluir}>
+        <ModalHeader>Incluir Alunos</ModalHeader>
+      <ModalBody>
+        <div className= "form-group">
+          <label>Nome: </label>
+          <br />
+          <input type="text" className="form-control" name="nome" onChange={handleChange}/>
+          <br />
+          <label>Email: </label>
+          <br />
+          <input type="text" className="form-control" name = "email" onChange={handleChange}/>
+          <br />
+          <label>Idade: </label>
+          <br />
+          <input type="text" className="form-control" name="idade" onChange={handleChange}/>
+        </div>
+      </ModalBody>
+      <ModalFooter>
+        <button className="btn btn-primary" onClick={()=> pedidosPost()}>Incluir</button>
+        <button className="btn btn-danger" onClick={()=> abrirFecharModalIncluir()}>Cancelar</button>
+      </ModalFooter>
+      </Modal>
     </div>
   );
 }
